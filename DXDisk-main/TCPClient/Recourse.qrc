@@ -1,0 +1,24 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icon/file_type_icon/audio.png</file>
+        <file>icon/file_type_icon/dir.png</file>
+        <file>icon/file_type_icon/exe.png</file>
+        <file>icon/file_type_icon/gif.png</file>
+        <file>icon/file_type_icon/picture.png</file>
+        <file>icon/file_type_icon/ppt.png</file>
+        <file>icon/file_type_icon/txt.png</file>
+        <file>icon/file_type_icon/unknow.png</file>
+        <file>icon/file_type_icon/video.png</file>
+        <file>icon/file_type_icon/word.png</file>
+        <file>icon/file_type_icon/zip.png</file>
+        <file>icon/file_type_icon/xlsx.png</file>
+        <file>icon/file_type_icon/pdf.png</file>
+        <file>icon/home_item_icon/filetransfer.png</file>
+        <file>icon/home_item_icon/friend.png</file>
+        <file>icon/home_item_icon/webdisk.png</file>
+        <file>icon/home_item_icon/recv.png</file>
+        <file>icon/home_item_icon/recvRD.png</file>
+        <file>icon/home_item_icon/connect.png</file>
+        <file>icon/home_item_icon/disconnect.png</file>
+    </qresource>
+</RCC>
