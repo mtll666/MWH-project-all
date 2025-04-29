@@ -1,0 +1,1370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Simplayer-MediaPlayer</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">[theme="dark"] {
+        background-color: #2A2F32; border-radius: 15px;
+    }
+    [theme="dark"] QPushButton {
+        border-radius: 5px; background: #3C4144; padding: 4px; color: #F0F0F0; font-family: '微软雅黑'; font-size: 14px; border: 1px solid #0078D7;
+    }
+    [theme="dark"] QPushButton:hover {
+        background: #0078D7; border: 1px solid #0078D7;
+    }
+    [theme="dark"] QLabel {
+        color: #F0F0F0; background-color: rgba(0, 0, 0, 0); font-family: '微软雅黑'; font-size: 14px;
+    }
+    [theme="dark"] QListWidget {
+        border: none; background-color: #3C4144; border-radius: 10px;
+    }
+    [theme="dark"] QListWidget::item {
+        font-size: 24px; color: #0078D7; font-family: '微软雅黑';
+    }
+    [theme="dark"] QListWidget::item:hover {
+        background-color: rgba(0, 120, 215, 80);
+    }
+    [theme="dark"] QListWidget::item:selected {
+        background-color: #0078D7;
+    }
+    [theme="dark"] QComboBox {
+        background: #3C4144; color: #F0F0F0; border-radius: 5px; padding: 4px; font-family: '微软雅黑'; font-size: 14px; border: 1px solid #0078D7;
+    }
+    [theme="dark"] QComboBox:hover {
+        border: 1px solid #0078D7;
+    }
+    [theme="dark"] QComboBox QAbstractItemView {
+        background: #3C4144; color: #F0F0F0; selection-background-color: #0078D7;
+    }
+    [theme="dark"] QSlider::groove:horizontal {
+        border: 0px; height: 4px; background: #5C6164; border-radius: 2px;
+    }
+    [theme="dark"] QSlider::sub-page:horizontal {
+        background-color: #FFFFFF; border-radius: 2px;
+    }
+    [theme="dark"] QSlider::add-page:horizontal {
+        background-color: #5C6164; border-radius: 2px;
+    }
+    [theme="dark"] QSlider::handle:horizontal {
+        background: #FFFFFF; border: 1px solid #FFFFFF; width: 8px; height: 8px; border-radius: 4px; margin-top: -2px; margin-bottom: -2px;
+    }
+    [theme="dark"] QSlider::handle:horizontal:hover {
+        background: #0078D7;
+    }
+    [theme="dark"] QLineEdit {
+        background: #3C4144; color: #F0F0F0; border-radius: 5px; padding: 4px; font-family: '微软雅黑'; font-size: 14px; border: 1px solid #0078D7;
+    }
+    [theme="dark"] QLineEdit:hover {
+        border: 1px solid #0078D7;
+    }
+    [theme="light"] {
+        background-color: #F5F7FA; border-radius: 15px;
+    }
+    [theme="light"] QPushButton {
+        border-radius: 5px; background: #E0E6ED; padding: 4px; color: #333333; font-family: '微软雅黑'; font-size: 14px; border: 1px solid #0078D7;
+    }
+    [theme="light"] QPushButton:hover {
+        background: #0078D7; color: #FFFFFF; border: 1px solid #0078D7;
+    }
+    [theme="light"] QLabel {
+        color: #333333; background-color: rgba(0, 0, 0, 0); font-family: '微软雅黑'; font-size: 14px;
+    }
+    [theme="light"] QListWidget {
+        border: none; background-color: #E0E6ED; border-radius: 10px;
+    }
+    [theme="light"] QListWidget::item {
+        font-size: 24px; color: #0078D7; font-family: '微软雅黑';
+    }
+    [theme="light"] QListWidget::item:hover {
+        background-color: rgba(0, 120, 215, 80);
+    }
+    [theme="light"] QListWidget::item:selected {
+        background-color: #0078D7; color: #FFFFFF;
+    }
+    [theme="light"] QComboBox {
+        background: #E0E6ED; color: #333333; border-radius: 5px; padding: 4px; font-family: '微软雅黑'; font-size: 14px; border: 1px solid #0078D7;
+    }
+    [theme="light"] QComboBox:hover {
+        border: 1px solid #0078D7;
+    }
+    [theme="light"] QComboBox QAbstractItemView {
+        background: #E0E6ED; color: #333333; selection-background-color: #0078D7;
+    }
+    [theme="light"] QSlider::groove:horizontal {
+        border: 0px; height: 4px; background: #B0B6BD; border-radius: 2px;
+    }
+    [theme="light"] QSlider::sub-page:horizontal {
+        background-color: #0078D7; border-radius: 2px;
+    }
+    [theme="light"] QSlider::add-page:horizontal {
+        background-color: #B0B6BD; border-radius: 2px;
+    }
+    [theme="light"] QSlider::handle:horizontal {
+        background: #FFFFFF; border: 1px solid #0078D7; width: 8px; height: 8px; border-radius: 4px; margin-top: -2px; margin-bottom: -2px;
+    }
+    [theme="light"] QSlider::handle:horizontal:hover {
+        background: #0078D7;
+    }
+    [theme="light"] QLineEdit {
+        background: #E0E6ED; color: #333333; border-radius: 5px; padding: 4px; font-family: '微软雅黑'; font-size: 14px; border: 1px solid #0078D7;
+    }
+    [theme="light"] QLineEdit:hover {
+        border: 1px solid #0078D7;
+    }</string>
+   </property>
+   <property name="theme" stdset="0">
+    <string>dark</string>
+   </property>
+   <layout class="QVBoxLayout" name="mainLayout">
+    <property name="spacing">
+     <number>10</number>
+    </property>
+    <property name="leftMargin">
+     <number>10</number>
+    </property>
+    <property name="topMargin">
+     <number>10</number>
+    </property>
+    <property name="rightMargin">
+     <number>10</number>
+    </property>
+    <property name="bottomMargin">
+     <number>10</number>
+    </property>
+    <item>
+     <widget class="QWidget" name="titleBar" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">[theme="dark"] { background-color: rgba(40, 45, 48, 200); }
+[theme="light"] { background-color: rgba(245, 247, 250, 200); }</string>
+      </property>
+      <layout class="QHBoxLayout" name="titleBarLayout">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <spacer name="titleSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Expanding</enum>
+         </property>
+         <property name="sizeHint">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="minimize">
+         <property name="minimumSize">
+          <size>
+           <width>28</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>28</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton { image: url(:new/image/minimize.png); border: none; background: transparent; border-radius: 14px; padding: 6px; } QPushButton:hover { background: rgba(255, 255, 255, 50); }</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="maximize">
+         <property name="minimumSize">
+          <size>
+           <width>28</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>28</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton { image: url(:new/image/maximize.png); border: none; background: transparent; border-radius: 14px; padding: 6px; } QPushButton:hover { background: rgba(255, 255, 255, 50); }</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="close">
+         <property name="minimumSize">
+          <size>
+           <width>28</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>28</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton { image: url(:new/image/close.png); border: none; background: transparent; border-radius: 14px; padding: 6px; } QPushButton:hover { background: rgba(255, 0, 0, 100); }</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="titleSpacer2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint">
+          <size>
+           <width>15</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="contentLayout">
+      <property name="spacing">
+       <number>10</number>
+      </property>
+      <item>
+       <layout class="QVBoxLayout" name="videoLayout">
+        <property name="spacing">
+         <number>10</number>
+        </property>
+        <item>
+         <widget class="VideoWidget" name="normal_widget" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>1</horstretch>
+            <verstretch>1</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background: black; border-radius: 5px;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="VideoFrameDisplay" name="reverse_widget" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>1</horstretch>
+            <verstretch>1</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background: black; border-radius: 5px;</string>
+          </property>
+          <property name="visible">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="waveformWidget" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background: black; border-radius: 5px;</string>
+          </property>
+          <layout class="QHBoxLayout" name="waveformLayout">
+           <property name="spacing">
+            <number>10</number>
+           </property>
+           <property name="leftMargin">
+            <number>10</number>
+           </property>
+           <property name="topMargin">
+            <number>10</number>
+           </property>
+           <property name="rightMargin">
+            <number>10</number>
+           </property>
+           <property name="bottomMargin">
+            <number>10</number>
+           </property>
+           <item>
+            <spacer name="waveformSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="resizeWaveformButton">
+             <property name="minimumSize">
+              <size>
+               <width>100</width>
+               <height>28</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>28</height>
+              </size>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="text">
+              <string>调整波形</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QWidget" name="sideBlock" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>240</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>240</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">[theme="dark"] { background-color: rgba(60, 65, 68, 160); border-radius: 10px; }
+[theme="light"] { background-color: rgba(224, 230, 237, 160); border-radius: 10px; }</string>
+        </property>
+        <layout class="QVBoxLayout" name="sideLayout">
+         <property name="spacing">
+          <number>10</number>
+         </property>
+         <property name="leftMargin">
+          <number>10</number>
+         </property>
+         <property name="topMargin">
+          <number>10</number>
+         </property>
+         <property name="rightMargin">
+          <number>10</number>
+         </property>
+         <property name="bottomMargin">
+          <number>10</number>
+         </property>
+         <item>
+          <widget class="QListWidget" name="playList">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>1</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="acceptDrops">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="mediaInfoLabel">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>80</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">[theme="dark"] { background-color: rgba(0, 0, 0, 150); color: #F0F0F0; padding: 8px; font-family: '微软雅黑'; font-size: 12px; }
+[theme="light"] { background-color: rgba(255, 255, 255, 150); color: #333333; padding: 8px; font-family: '微软雅黑'; font-size: 12px; }</string>
+           </property>
+           <property name="text">
+            <string>媒体信息</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="errorLabel">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>60</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">[theme="dark"] { background-color: rgba(255, 0, 0, 100); color: #F0F0F0; padding: 8px; font-family: '微软雅黑'; font-size: 12px; }
+[theme="light"] { background-color: rgba(255, 0, 0, 100); color: #333333; padding: 8px; font-family: '微软雅黑'; font-size: 12px; }</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QWidget" name="controllerWidget" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>120</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>120</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">[theme="dark"] { background-color: rgba(60, 65, 68, 160); border-radius: 10px; }
+[theme="light"] { background-color: rgba(224, 230, 237, 160); border-radius: 10px; }</string>
+      </property>
+      <layout class="QVBoxLayout" name="controllerLayout">
+       <property name="spacing">
+        <number>10</number>
+       </property>
+       <property name="leftMargin">
+        <number>10</number>
+       </property>
+       <property name="topMargin">
+        <number>10</number>
+       </property>
+       <property name="rightMargin">
+        <number>10</number>
+       </property>
+       <property name="bottomMargin">
+        <number>10</number>
+       </property>
+       <item>
+        <widget class="QWidget" name="sliderWidget" native="true">
+         <layout class="QHBoxLayout" name="sliderLayout">
+          <property name="spacing">
+           <number>10</number>
+          </property>
+          <property name="leftMargin">
+           <number>10</number>
+          </property>
+          <property name="topMargin">
+           <number>2</number>
+          </property>
+          <property name="rightMargin">
+           <number>10</number>
+          </property>
+          <property name="bottomMargin">
+           <number>2</number>
+          </property>
+          <item>
+           <spacer name="sliderSpacer1">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint">
+             <size>
+              <width>10</width>
+              <height>8</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="VideoSlider" name="video_slider">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>8</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="maximum">
+             <number>100</number>
+            </property>
+            <property name="value">
+             <number>0</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="sliderSpacer2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint">
+             <size>
+              <width>10</width>
+              <height>8</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="buttonsLayout">
+         <property name="spacing">
+          <number>10</number>
+         </property>
+         <item>
+          <layout class="QHBoxLayout" name="timeLayout">
+           <property name="spacing">
+            <number>10</number>
+           </property>
+           <item>
+            <spacer name="timeSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Fixed</enum>
+             </property>
+             <property name="sizeHint">
+              <size>
+               <width>10</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLabel" name="current_time">
+             <property name="text">
+              <string>00:00:00 / 00:00:00</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <spacer name="buttonsSpacer1">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint">
+            <size>
+             <width>10</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="backward_seconds">
+           <property name="minimumSize">
+            <size>
+             <width>40</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>40</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton { image: url(:new/image/backward_second.png); border-radius: 5px; padding: 6px; } QPushButton:hover { image: url(:new/image/backward_second.png); } QPushButton:pressed { image: url(:new/image/backward_second.png); }</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="forward_seconds">
+           <property name="minimumSize">
+            <size>
+             <width>40</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>40</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton { image: url(:new/image/forward_second.png); border-radius: 5px; padding: 6px; } QPushButton:hover { image: url(:new/image/forward_second.png); } QPushButton:pressed { image: url(:new/image/forward_second.png); }</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="buttonsSpacer2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint">
+            <size>
+             <width>10</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QComboBox" name="speedComboBox">
+           <property name="minimumSize">
+            <size>
+             <width>80</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>80</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="currentIndex">
+            <number>2</number>
+           </property>
+           <item>
+            <property name="text">
+             <string>0.5x</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>0.75x</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>1.0x</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>1.25x</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>1.5x</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>2.0x</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>3.0x</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <spacer name="buttonsSpacer3">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint">
+            <size>
+             <width>10</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="previous_video">
+           <property name="minimumSize">
+            <size>
+             <width>40</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>40</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton { image: url(:new/image/back.png); border-radius: 5px; padding: 6px; }</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="buttonsSpacer4">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint">
+            <size>
+             <width>10</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="play_button">
+           <property name="minimumSize">
+            <size>
+             <width>40</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>40</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton { image: url(:new/image/start_normal.png); border-radius: 5px; padding: 6px; } QPushButton:hover { image: url(:new/image/start_focus.png); } QPushButton:pressed { image: url(:new/image/start_normal.png); }</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pause_botton">
+           <property name="minimumSize">
+            <size>
+             <width>40</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>40</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton { image: url(:new/image/pause_normal.png); border-radius: 5px; padding: 6px; } QPushButton:hover { image: url(:new/image/pause_focus.png); } QPushButton:pressed { image: url(:new/image/pause_normal.png); }</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="visible">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="buttonsSpacer5">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint">
+            <size>
+             <width>10</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="next_video">
+           <property name="minimumSize">
+            <size>
+             <width>40</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>40</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton { image: url(:new/image/forward.png); border-radius: 5px; padding: 6px; }</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="buttonsSpacer6">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint">
+            <size>
+             <width>10</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="volume_button">
+           <property name="minimumSize">
+            <size>
+             <width>40</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>40</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton { image: url(:new/image/volume_normal.png); border-radius: 5px; padding: 6px; } QPushButton:hover { image: url(:new/image/volume_normal_focus.png); } QPushButton:!checked { image: url(:new/image/volume_normal.png); } QPushButton:checked { image: url(:new/image/volume_mute.png); }</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSlider" name="volume_slider">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>80</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>80</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="singleStep">
+            <number>1</number>
+           </property>
+           <property name="pageStep">
+            <number>10</number>
+           </property>
+           <property name="value">
+            <number>100</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="buttonsSpacer7">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint">
+            <size>
+             <width>10</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="repeat">
+           <property name="minimumSize">
+            <size>
+             <width>40</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>40</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton { image: url(:new/image/inorder.png); border-radius: 5px; padding: 6px; }</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="buttonsSpacer8">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint">
+            <size>
+             <width>10</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="addFile">
+           <property name="minimumSize">
+            <size>
+             <width>40</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>40</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton { image: url(:new/image/add.png); border-radius: 5px; padding: 6px; } QPushButton:hover { image: url(:new/image/add.png); } QPushButton:pressed { image: url(:new/image/add.png); }</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="buttonsSpacer9">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Expanding</enum>
+           </property>
+           <property name="sizeHint">
+            <size>
+             <width>10</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="screenshotButton">
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string>截图</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="buttonsSpacer10">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint">
+            <size>
+             <width>10</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QComboBox" name="themeComboBox">
+           <property name="minimumSize">
+            <size>
+             <width>80</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>80</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="currentIndex">
+            <number>0</number>
+           </property>
+           <item>
+            <property name="text">
+             <string>深色</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>浅色</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <spacer name="buttonsSpacer11">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint">
+            <size>
+             <width>10</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="loadSubtitleButton">
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string>加载字幕</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="buttonsSpacer12">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Expanding</enum>
+           </property>
+           <property name="sizeHint">
+            <size>
+             <width>10</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="reversePlayButton">
+           <property name="minimumSize">
+            <size>
+             <width>40</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>40</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton { image: url(:new/image/playback.png); border-radius: 5px; padding: 6px; } QPushButton:hover { image: url(:new/image/playback_hover.png); } QPushButton:pressed { image: url(:new/image/playback.png); }</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="streamLayout">
+         <property name="spacing">
+          <number>10</number>
+         </property>
+         <item>
+          <widget class="QLineEdit" name="streamUrlInput">
+           <property name="minimumSize">
+            <size>
+             <width>200</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>200</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="placeholderText">
+            <string>输入流媒体 URL</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="playStreamButton">
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>28</height>
+            </size>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string>播放流</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="streamSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Expanding</enum>
+           </property>
+           <property name="sizeHint">
+            <size>
+             <width>10</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>VideoSlider</class>
+   <extends>QSlider</extends>
+   <header>Widget/VideoSlider.h</header>
+  </customwidget>
+  <customwidget>
+   <class>VideoWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">Widget/videowidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>VideoFrameDisplay</class>
+   <extends>QWidget</extends>
+   <header>Widget/videoframedisplay.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
