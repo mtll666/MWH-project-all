@@ -1,5 +1,0 @@
-[server]
-port=8554
-media_dir=./media/
-data_dir=./data/
-max_threads=4
